@@ -36,6 +36,24 @@ public class StringCompression {
         System.out.println("Actual: " + compressString("abcdefghijklmnop"));
 
         System.out.println();
+
+        System.out.println("Test case 6:");
+        System.out.println("Expected: a");
+        System.out.println("Actual: " + compressString("a"));
+
+        System.out.println();
+
+        System.out.println("Test case 7:");
+        System.out.println("Expected: a2");
+        System.out.println("Actual: " + compressString("aa"));
+
+        System.out.println();
+
+        System.out.println("Test case 8:");
+        System.out.println("Expected: ab");
+        System.out.println("Actual: " + compressString("ab"));
+
+        System.out.println();
     }
 
     // O(n) complexity (iterating through a string --> O(n), appending StringBuilder --> O(1), putting element in HashMap --> O(1), contains function in HashMap --> O(1))
