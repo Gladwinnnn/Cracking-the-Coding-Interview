@@ -25,11 +25,6 @@ public class LinkedListTemplate {
         }
 
         public void prepend(int data) {
-            if (head == null) {
-                head = new Node(data);
-                return;
-            }
-
             Node newNode = new Node(data);
             newNode.next = head;
             head = newNode;
