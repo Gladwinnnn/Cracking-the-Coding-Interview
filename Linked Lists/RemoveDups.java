@@ -70,13 +70,14 @@ public class RemoveDups {
     public static void removeDuplicates(LinkedList linkedList) {
         HashSet<Integer> numberList = new HashSet<>();
         Node current = linkedList.head;
-        
+
         while (current.next != null) {
-            if (numberList.contains(current.data)) {
-                linkedList.delete(current.data);
+            if (numberList.contains(current.next.data)) {
+                current.next = current.next.next;
+            } else {
+                numberList.add(current.data);
+                current = current.next;
             }
-            numberList.add(current.data);
-            current = current.next;
         }
         if (!numberList.contains(current.data)) {
             linkedList.append(current.data);
